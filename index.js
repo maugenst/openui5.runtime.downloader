@@ -11,12 +11,12 @@ const request = require('request');
 const progress = require('request-progress');
 const AdmZip = require('adm-zip');
 const pretty = require('prettysize');
-const packageVersion = require('./package.json');
+const packageJson = require('./package.json');
 
-let oUrl = url.parse(`http://openui5.hana.ondemand.com/downloads/openui5-runtime-${myVersion.version}.zip`);
+let oUrl = url.parse(`http://openui5.hana.ondemand.com/downloads/openui5-runtime-${packageJson.version}.zip`);
 
 let downloadDir = path.resolve(__dirname + path.dirname(oUrl.pathname));
-let outDir = path.resolve(`${__dirname}/lib/${myVersion.version}`);
+let outDir = path.resolve(`${__dirname}/lib/${packageJson.version}`);
 if (!fs.existsSync(downloadDir)) {
     mkdirp.sync(downloadDir);
 }
