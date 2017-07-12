@@ -1,14 +1,14 @@
 {
   "name": "openui5.runtime.downloader",
-  "version": "1.46.9",
-  "description": "This bundle downloads the officially released OpenUI5 runtime zip from http://openui5.hana.ondemand.com/downloads, unpacks them locally and exposes them in the node_modules directory to be consumable by a static webserver.",
+  "version": "1.46.11",
+  "description": "This bundle downloads the officially released OpenUI5 runtime zip from http://openui5.org/download.html, unpacks them locally and exposes them in the node_modules directory to be consumable by a static webserver.",
   "main": "index.js",
   "scripts": {
     "postinstall": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/maugenst/openui5.npm.packager.git"
+    "url": "git+https://github.com/maugenst/openui5.runtime.downloader.git"
   },
   "keywords": [
     "openui5",
