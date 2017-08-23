@@ -36,6 +36,7 @@ config/runtime.yaml
 config/local.yaml
 
 data
+downloads
 
 config/local.yaml
 config/local.yaml

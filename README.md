@@ -12,6 +12,14 @@ cd my.new.project
 npm init
 ```
 
+If you are behind a corporate firewall you need to set up the two environment variables:
+
+For instance on Linux:
+```
+export HTTP_PROXY=http://<YOURPROXY>:8080
+export HTTPS_PROXY=http://<YOURPROXY>:8080
+```
+
 ## Add dependencies
 
 ```
