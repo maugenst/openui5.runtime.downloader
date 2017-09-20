@@ -11,7 +11,6 @@ const progress = require('request-progress');
 const AdmZip = require('adm-zip');
 const pretty = require('prettysize');
 const packageJson = require('./package.json');
-const isReachable = require('is-reachable');
 
 let openUI5DownloadHost = packageJson.openui5.downloadHost;
 let oUrl = url.parse(`http://${openUI5DownloadHost}/downloads/openui5-runtime-${packageJson.openui5.version}.zip`);
@@ -24,14 +23,9 @@ Promise.all([fse.remove(outDir), fse.remove(downloadDir)])
     .then(() => {
         const p1 = mkdirp(downloadDir);
         const p2 = mkdirp(outDir);
-        const p3 = isReachable(openUI5DownloadHost);
-        return Promise.all([p1, p2, p3]);
+        return Promise.all([p1, p2]);
     })
     .then(values => {
-        const reachable = values[2];
-        if (!reachable) {
-            throw new Error('OpenUI5 download host not reachable. Try setting proxy (i.e. export HTTP_PROXY=http://proxy:8080)');
-        }
         return new Promise((resolve, reject) => {
             console.log(`Downloading ${oUrl.href} into ${outDir}`);
             progress(request(oUrl.href))
@@ -88,5 +82,6 @@ Promise.all([fse.remove(outDir), fse.remove(downloadDir)])
         return fse.remove(downloadDir);
     })
     .catch(function(err) {
+        console.log('Try setting proxy (i.e. export HTTP_PROXY=http://proxy:8080)');
         console.log(err);
     });
