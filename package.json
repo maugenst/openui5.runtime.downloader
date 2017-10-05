@@ -34,7 +34,7 @@
     "request-progress": "^3.0.0"
   },
   "openui5": {
-    "version": "1.48.6",
+    "version": "1.48.9",
     "downloadHost": "openui5.hana.ondemand.com"
   }
 }
