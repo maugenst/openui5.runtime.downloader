@@ -4,6 +4,24 @@ using the packages own version from [Download UI5](http://openui5.org/download.h
 to the folder lib/<version>. It also deletes the debug javascript sources. With this it can be used
 to statically and exposed by a webserver (i.e. node/express) and then be consumed by your UI5 app.
 
+## Configuration
+In package.json of project you can specify the version you want to use (stable == optional):
+```
+"openui5": {
+    "version": "latest",
+    "stable": "true",
+    "downloadHost": "openui5.hana.ondemand.com"
+  }
+```
+
+If you want to use a specific version, just add this here (i.E.):
+```
+"openui5": {
+    "version": "1.48.10",
+    "downloadHost": "openui5.hana.ondemand.com"
+  }
+```
+
 ## Manual Steps for creating a new project
 
 ```

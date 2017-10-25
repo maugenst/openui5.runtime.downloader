@@ -46,7 +46,6 @@ Promise.all([rpn.get(oUI5VersionUrl.href), fse.remove(outDir), fse.remove(downlo
             packageJson.openui5.version === 'latest' ? calcLatest(JSON.parse(data[0])) : packageJson.openui5.version;
         const p1 = mkdirp(downloadDir);
         const p2 = mkdirp(outDir);
-        process.exit(0);
         return Promise.all([p1, p2]);
     })
     .then(values => {
