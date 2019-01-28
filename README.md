@@ -5,11 +5,10 @@ to the folder lib/<version>. It also deletes the debug javascript sources. With 
 to statically and exposed by a webserver (i.e. node/express) and then be consumed by your UI5 app.
 
 ## Configuration
-In package.json of project you can specify the version you want to use (stable == optional):
+In package.json of project you can specify the version you want to use:
 ```
 "openui5": {
     "version": "latest",
-    "stable": "true",
     "downloadHost": "openui5.hana.ondemand.com"
   }
 ```

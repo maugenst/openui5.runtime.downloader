@@ -1,6 +1,6 @@
 {
   "name": "openui5.runtime.downloader",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "This bundle downloads the officially released OpenUI5 runtime zip from http://openui5.org/download.html, unpacks them locally and exposes them in the node_modules directory to be consumable by a static webserver.",
   "main": "index.js",
   "scripts": {
@@ -23,6 +23,7 @@
   "homepage": "https://github.com/maugenst/openui5.runtime.downloader#readme",
   "dependencies": {
     "adm-zip": "^0.4.7",
+    "compare-versions": "^3.4.0",
     "fs-extra": "^3.0.1",
     "is-reachable": "^2.3.3",
     "mkdirp": "^0.5.1",
@@ -36,7 +37,6 @@
   },
   "openui5": {
     "version": "latest",
-    "stable": "true",
     "downloadHost": "openui5.hana.ondemand.com"
   }
 }
